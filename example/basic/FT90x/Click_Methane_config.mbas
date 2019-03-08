@@ -1,0 +1,5 @@
+module Click_Methane_config
+
+include Click_Methane_types
+
+end.

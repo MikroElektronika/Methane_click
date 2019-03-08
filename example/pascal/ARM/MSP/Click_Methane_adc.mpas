@@ -1,0 +1,28 @@
+unit Click_Methane_adc;
+
+uses Click_Methane_types;
+
+procedure methane_adcInit(); 
+function  methane_readADC() :  uint32_t; 
+
+implementation
+
+procedure methane_adcInit(); 
+begin
+
+    ADC_Init(); 
+    ADC_Set_Input_Channel(_ADC_CHANNEL_15); 
+
+end;
+
+function  methane_readADC() :  uint32_t; 
+var
+    readADC : uint32_t;
+begin
+
+    readADC := ADC_Read(15); 
+    result := readADC; 
+
+end;
+
+end.
